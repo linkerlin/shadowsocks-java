@@ -37,8 +37,8 @@ public class Main {
         }
 
         try {
-            //LocalServer server = new LocalServer(config);
-            NioLocalServer server = new NioLocalServer(config);
+            LocalServer server = new LocalServer(config);
+            //NioLocalServer server = new NioLocalServer(config);
             Thread t = new Thread(server);
             t.start();
             logger.info("Shadowsocks-Java v" + Util.getVersion());
